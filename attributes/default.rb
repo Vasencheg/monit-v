@@ -1,1 +1,1 @@
-default[:monit][:notify_emails] = false
+default[:monit][:notify_emails] = true
