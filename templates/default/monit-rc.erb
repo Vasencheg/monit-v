@@ -8,7 +8,7 @@ set logfile syslog facility log_daemon
       <% if node[:monit][:minimise_alerts] %>
 set alert <%= email %> but not on {instance, pid, ppid, resource}
       <% else %>
-set alert <%= email %>
+set alert <%= email %> but not on {instance}
       <% end %>
     <% end %>
   <% end %>
