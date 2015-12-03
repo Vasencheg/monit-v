@@ -2,7 +2,6 @@ set daemon <%= node[:monit][:poll_period] || 30 %>
 
 set logfile syslog facility log_daemon
 
-
 <% if node[:monit][:enable_emails] %>
   <% if node[:monit][:notify_emails] %>
     <% node[:monit][:notify_emails].each do |email| %>
@@ -13,6 +12,8 @@ set alert <%= email %>
       <% end %>
     <% end %>
   <% end %>
+
+set mail-format { from: monit@companycam.com }
 
 <% if node[:monit][:mailserver] %>
 set mailserver "<%= node[:monit][:mailserver][:host] %>"
