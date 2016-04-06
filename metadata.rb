@@ -1,6 +1,6 @@
-name              "monit-cc"
-maintainer        "Chad Wilken"
-maintainer_email  "chad@companycam.com"
+name              "monit-v"
+maintainer        "Roman Vasilev aka Vasencheg"
+maintainer_email  "vasencheg@gmail.com"
 description       "Basic monit installation"
 version           "0.3.16"
 
